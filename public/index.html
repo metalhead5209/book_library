@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Signika+Negative&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=PT+Sans+Narrow&family=Signika+Negative&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@1,100&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bayon&family=Exo+2:ital,wght@1,100&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chango&display=swap" rel="stylesheet">
+    <title> Digital Library </title>
+</head>
+
+<body>
+    <header>
+
+        <h1 id="main-heading"> My Library </h1>
+
+
+        <h2 id="secondary-heading"> Add Book </h2>
+
+        <button id="open-addBook-modal">Open</button>  <br />
+
+        <button id="open-addBook-modal" class="clearBtn">Clear</button>
+
+
+    </header>
+
+    <main>
+
+        <section class="add-book-container">
+
+            <!-- Modal Container -->
+            <div class="modal-container" id="main-modal-container">
+
+                <!-- Modal -->
+                <div class="modal">
+
+                    <!-- Modal Content Container -->
+                    <div class="modal-content">
+                        <span id="close-modal-btn">&#88</span>
+
+                        <!-- Modal Content header Container -->
+                        <div class="modal-content-header">
+
+                            <!-- Add Book Icon -->
+                            <img src="/imgs/addBook.svg" alt="addIcon" id="addIcon-btn">
+
+                            <!-- Add Book -->
+                            <h3 id="modal-title">Add Book</h3>
+
+                        </div>
+                        <!-- Modal Content Form Container -->
+                        <div class="form">
+
+                            <!-- Form -->
+                            <form>
+                                <!-- Title Input -->
+                                <div class="book-input" id="title-input">
+                                    <label for="title-input" class="input-label">Title</label>
+                                    <input type="text" name="title" class="form-input title" id="title-input" required>
+                                </div>
+
+                                <!-- Authur Input -->
+                                <div class="book-input" id="authur-input">
+                                    <label for="authur-input" class="input-label">Author</label>
+                                    <input type="text" name="authur" class="form-input authur" id="authur-input"
+                                        required>
+                                </div>
+
+                                <!-- Page Number Input -->
+                                <div class="page-input" id="page-input">
+                                    <label for="page-number-input" class="input-label">Number of Pages</label>
+                                    <input type="number" name="page-number" class="form-input page"
+                                        id="page-number-input" required>
+                                </div>
+
+                                <!-- Checkbox for Read or Not -->
+                                <div class="book-input-radio" id="checkbox-input">
+                                    <p class="input-label">Have you read the book?</p>
+
+                                    <select class="select" required>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+
+
+        </section>
+
+        <section class="book-library">
+
+
+
+
+        </section>
+
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

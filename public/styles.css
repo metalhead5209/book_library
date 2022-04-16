@@ -1,0 +1,312 @@
+:root {
+    --main-text: #f8edeb;
+    --mainBGcolor: #14213d;
+}
+
+/* #hidden {
+    display: none;
+} */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #14213d;
+    z-index: 10;
+}
+
+#main-heading {
+    color: var(--main-text);
+    font-size: 3.5em;
+    font-weight: lighter;
+    font-family: 'Permanent Marker', cursive;
+
+}
+
+#main-desc {
+    font-family: 'Exo 2', sans-serif;
+    color: var(--main-text);
+    font-size: 1.5em;
+    font-weight: 800;
+}
+
+#secondary-heading {
+    color: var(--main-text);
+    font-family: 'Bayon', sans-serif;   
+}
+
+
+#open-addBook-modal {
+    border-radius: 5px 8px;
+    padding: .5em;
+    width: 8em;
+    font-family: 'Chango', cursive;
+    font-weight: 900;
+    font-size: 1.3em;
+    color: var(--mainBGcolor);
+    margin-bottom: 2em;
+}
+
+#open-addBook-modal:hover {
+    background-color: var(--mainBGcolor);
+    color: var(--main-text);
+    transition: ease .2s;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 15px;
+    cursor: pointer;
+    
+
+}
+
+
+/* POP UP MODAL */
+
+.modal-container {
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    z-index: 10;
+    display: none;
+}
+
+.modal {
+    background-color: #263452;
+    height: 100%;
+    max-height: 600px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 15px;
+    top: 10%;
+    text-align: center;
+    padding: 1em;
+    
+}
+
+#close-modal-btn {
+    color: var(--main-text);
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    cursor: pointer;
+}
+
+#close-modal-btn:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    justify-content:space-evenly;
+ 
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50%;
+}
+
+.book-input {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+}
+
+.radio {
+    max-width: 10px;
+}
+
+#modal-title {
+    font-size: xx-large;
+    margin: 0;
+    color: var(--main-text);
+}
+
+#addIcon-btn {
+    width: 8em;
+    margin: 1em;
+    /* max-width: 90%; */
+}
+
+
+
+#addIcon-btn:hover {
+    background-color: Green;
+    border-radius: 65px;
+    transform: translateY(-2px);
+    cursor: pointer;
+    padding: .5em;
+}
+
+.form-input {
+   margin: 1em 2em;
+   padding: .5em;
+   border-radius: 5px;
+
+}
+
+#modal-title {
+    font-family: 'Signika Negative', sans-serif;
+}
+
+.input-label {
+    font-family: 'Signika Negative', sans-serif;
+    color: var(--main-text);
+}
+
+
+.select {
+    appearance: none;
+    background-color: rgb(233, 233, 233);
+    border: none;
+    padding: 0 1em 0 0;
+    border-radius: 5px;
+    margin: 10% auto;
+    width: 50%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    position: absolute;
+    top: 85%;
+    right: 25%;
+  }
+
+@media screen and (max-width: 520px) {
+    .modal {
+        width: 80%;
+        margin: auto;
+    }
+
+    #addIcon-btn {
+        width: 5em;
+    }
+
+}
+
+
+/* BOOK LIBRARY */
+
+.book-library{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr;
+    justify-content:space-evenly;
+    align-items: center;
+    margin: auto;
+}
+
+
+
+.lib-btn {
+    background-color: var(--mainBGcolor);
+    color: var(--main-text);
+    transition: ease .5s;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.lib-btn:hover {
+    transform: translateY(-2px);
+    background-color: var(--main-text);
+    color: var(--mainBGcolor);
+    transition: ease .2s;
+    box-shadow: rgba(21, 17, 81, 0.3) 0px 5px 15px;
+    cursor: pointer;
+    border: 2px inset var(--mainBGcolor);
+}
+
+
+.book-card {
+    height: 85%;
+    width: 20em;
+    background-color: white;
+    border-radius: 10px;
+    background-color: var(--main-text);
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 5px 15px;
+    margin: 10% auto;
+    margin-bottom: 2em;
+    border: 5px inset var(--mainBGcolor);
+
+}
+
+
+.card-title {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2em;
+    margin-right: 2em;
+    color: var(--mainBGcolor);
+    font-family: 'Signika Negative', sans-serif;
+    font-size: .8em;  
+}
+
+.edit-delete {
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
+}
+
+.switch-read:hover {
+    cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 820px) {
+    .lib-table {
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 820px) {
+    .book-library {
+        grid-template-columns: 2fr 2fr;
+    }
+
+    .book-card {
+        width: 15em;
+    }
+
+    
+}
+
+
+
+@media screen and (max-width: 450px) {
+    .book-library {
+        grid-template-columns: 1fr;
+        justify-content: center;
+       
+    }
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--main-text);    
+}
